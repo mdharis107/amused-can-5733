@@ -1,0 +1,35 @@
+.cards{
+    display: flex;
+    gap: 15px;
+    width: 90%;
+    margin: auto;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    padding: 15px;
+    justify-content: space-around;
+    align-items: left;
+    text-align: left;
+    margin-bottom: 15px;
+    background-color:#fff;
+    /* padding-top: 150px; */
+}
+.span{
+    color: grey;
+}
+.cards:hover {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 14%)
+}
+
+.img{
+    width: 400px;
+    height: 270px;
+}
+.wholecard{
+    padding-top: 120px;
+}
+.date{
+    font-size: 13px;
+}

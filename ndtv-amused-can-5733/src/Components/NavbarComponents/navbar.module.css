@@ -1,0 +1,109 @@
+
+
+.navbar_first_box{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 9px;
+    padding: 10px;
+    color: #c6c6c6;
+    width: 75%;
+    margin: auto;
+    border-radius: 4px;
+    line-height: normal;
+    letter-spacing: .39px;
+    transition: top 0.3s;
+}
+.navbar_first_box>div{
+    cursor: pointer;
+    /* border: 1px red solid; */
+    padding: 1px;
+}
+/* .navbar_first_link{
+    color: #c6c6c6
+} */
+.navbar{
+    background: #3e3e3e;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    position: fixed;
+    width: 100%;
+    /* position: sticky; */
+    top: 10;
+    
+}
+.second_box{
+    padding: 8px 0px;
+    width: 85%;
+    margin: auto;
+    background-color: #3e3e3e;
+    color: #fff;
+    font-size: 13px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-right: 170px;
+    font-weight: bold;
+    letter-spacing: .39px;
+    margin-left: 100px;
+    transition: all .3s ease-in;
+    position: relative;
+    /* width: 100%; */
+    top: 1;
+    
+}
+.second_box>div{
+    cursor: pointer;
+}
+/* .second_box:hover{
+    text-decoration: underline #fff ;
+} */
+
+.Link{
+    color: #fff;
+    text-decoration: none;
+}
+#home_logo{
+    width: 100px;
+    /* border: 1px red solid; */
+}
+
+.icons{
+    /* border: 1px red solid; */
+    margin-left: -20px;
+    padding: 5px;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.more{
+    font-size: 16px;
+}
+.showmore{
+    padding: 12px 0px;
+    width: 73%;
+    margin: auto;
+    /* border: 1px red solid; */
+    color: #fff;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .39px;
+    gap: 35px;
+    padding-left: 80px;
+}
+.showmore>div{
+    cursor: pointer;
+}
+.nxticons{
+    font-size: 25px;
+}
+
+
