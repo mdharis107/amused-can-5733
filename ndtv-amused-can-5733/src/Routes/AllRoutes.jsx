@@ -9,6 +9,7 @@ import LatestNewsPage from "../Pages/LatestPage";
 import LivePage from "../Pages/LivePage";
 import OffbeatPage from "../Pages/OffbeatPage";
 import SciencePage from "../Pages/SciencePage";
+import SearchPage from "../Pages/SearchPage";
 import SportsPage from "../Pages/SportsPage";
 import WorldNewsPage from "../Pages/WorldnewsPage";
 
@@ -30,6 +31,7 @@ function AllRoutes(){
                 <Route path="/sciencenews" element={<SciencePage/>} />
                 <Route path="/buisnessnews" element={<BuisnessPage/>} />
                 <Route path="/livenews" element={ <LivePage/>}/>
+                <Route path="/searchpage" element={<SearchPage/>}/>
             </Routes>
         </div>
     )

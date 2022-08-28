@@ -6,7 +6,7 @@ import { FaFacebookSquare } from "react-icons/fa"
 import { BsSmartwatch } from "react-icons/bs"
 import { ImSearch } from "react-icons/im"
 import { BsBellFill } from "react-icons/bs"
-import { useState } from "react"
+import { useState} from "react"
 import {
     Popover,
     PopoverTrigger,
@@ -15,7 +15,12 @@ import {
     Button,
     Portal,
     Input,
+    // Tooltip,
   } from '@chakra-ui/react'
+// import { AppContext } from "../../Context/AppContext"
+// import { getSearchNews } from "../api"
+// import SearchPage from "../../Pages/SearchPage"
+
 // import'https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap'
 
 
@@ -28,7 +33,33 @@ import {
 
 export default function NavbarPage(){
     const [show,setShow] = useState(false)
-    // const [search,setSearch] = useState(false)
+    const [search,setSearch] = useState("")
+    // const [data, setData] = useState()
+    // const navigate = useNavigate()
+    
+   
+// const {query,fetching} =useContext(AppContext);
+
+    const handleClick=()=>{
+     
+    //     // SearchPage(search)
+       
+    
+    //  fetch(`https://newsapi.org/v2/top-headlines?q=${search}&pageSize=40&apiKey=d5c75a6144e440f8a5165703eeb4a845`).
+    //  then((res)=>res.json())
+    //  .then(res=>{
+    //     // console.log(res.articles)
+    //     // SearchPage(res.articles)
+    //     fetching(search)
+    //     // setData(res.articles)
+    //  }).catch(err=>{
+    //     console.log(err)
+    //  })
+    //   navigate("/searchpage")
+    }
+    
+    // console.log(data)
+   
     
     return(
         <div className={styles.navbar}>
@@ -60,12 +91,15 @@ export default function NavbarPage(){
                         <img src="https://drop.ndtv.com/homepage/images/ndtvlogo22.svg" alt="" />
                     </Link>
                 </div>
+                {/* <Tooltip hasArrow label='Latest' bg='RGBA(255, 255, 255, 0.92)' color='#F7FAFC'> */}
                 
                 <div >
                     <Link className={styles.Link} to="/latest">
-                        LATEST
+                        LATEST                        
                     </Link>
                 </div>
+                {/* </Tooltip> */}
+
                 <div>
                 <Link className={styles.Link} to="/livenews" >
                     LIVE TV
@@ -153,8 +187,19 @@ export default function NavbarPage(){
                     </PopoverTrigger>
                     <Portal>
                         <PopoverContent>
-                        <PopoverBody style={{ padding:"20px",background:"#3e3e3e",marginTop:"5px", borderRadius:"5px"}}>
-                            <Input/> <Button style={{background:"#6288a5",color:"#fff", border:"none", borderRadius:"3px"}}>GO</Button>
+                        <PopoverBody style={{ padding:"20px",background:"#3e3e3e",marginTop:"5px", borderRadius:"5px",borderRight:"15px"}}>
+                            <Input type="text" value={search} onChange={(e)=>setSearch(e.target.value)} placeholder="Search here..." /> 
+    
+                            
+                            
+                            <Button
+                            onClick={handleClick} 
+                            style={{background:"#6288a5",color:"#fff", border:"none", borderRadius:"3px", padding:"3px", cursor:"pointer"}}>
+                                {/* <Link to="/searchpage"> */}
+                                GO
+                                {/* </Link> */}
+                            </Button>
+                            
                         </PopoverBody>
                         </PopoverContent>
                     </Portal>
