@@ -1,0 +1,105 @@
+.whole{
+    display: flex;
+    gap: 20px;
+    padding-top: 150px;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    /* border: 1px red solid; */
+}
+.container{
+    display: grid;
+    grid-template-columns:repeat(3,240px);
+    grid-template-rows: repeat(200px,auto);
+    /* row-gap: 15px; */
+    /* column-gap: 10px; */
+    /* border: 1px solid red; */
+    /* padding: 5px; */
+}
+.container>div{
+    padding: 15px;
+    display:inline-block ;
+    border: 1px solid #eaeaea;
+    /* border-radius: 6px; */
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    background-color:#fff;
+    font-size: 14px;
+}
+.container:hover{
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 14%);
+    
+
+    
+}
+.left{
+    /* border: 1px blue solid; */
+    /* margin-top: 20px; */
+    width: 400px;
+    height: 1500px;
+    /* overflow: scroll; */
+    overflow-x: scroll;
+  list-style: none;
+  margin-bottom: 50px;
+    /* width: 200px; */
+}
+.left::-webkit-scrollbar{
+    width: 5px;
+}
+.left::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+   .left::-webkit-scrollbar-thumb {
+    background: #888; 
+  } 
+   
+  /* Handle on hover */
+  .left::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+.img{
+    width: 200px;
+}
+
+.leftcard{
+    display: flex;
+    gap: 10px;
+    border: 1px solid #eaeaea;
+    background-color:#fff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-top: 5px;
+}
+.leftcard:hover{
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 14%)
+}
+.leftimg{
+    width: 120px;
+    border-radius: 8px;
+}
+
+/* #bot{
+    margin-top: 45px;
+} */
+
+.heading{
+    font-size: 15px;
+    font-weight: 900;
+    padding: 5px 12px;
+    letter-spacing: .5px;
+    /* line-height: 18px; */
+    text-align: center;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background: #2b2b2b;
+    float: left;
+    color: #fff;
+    margin-bottom: -5px;
+    margin-top: 0px;
+    /* border: 1px red solid; */
+}

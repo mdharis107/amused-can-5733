@@ -71,3 +71,14 @@ export function getHomePage(){
     return axios.get(`https://newsapi.org/v2/everything?q=tesla&from=2022-07-28&sortBy=publishedAt&apiKey=d5c75a6144e440f8a5165703eeb4a845`)
     
 }
+
+export function getHomeLeft(){
+    return axios.get(`https://newsapi.org/v2/top-headlines?country=in&pageSize=50&apiKey=d5c75a6144e440f8a5165703eeb4a845`)
+}
+
+
+
+
+export function getHomeBot(){
+    return axios.get(`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=d5c75a6144e440f8a5165703eeb4a845`)
+}
