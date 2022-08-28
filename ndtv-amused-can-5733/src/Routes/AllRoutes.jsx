@@ -1,9 +1,14 @@
 import { Route, Routes } from "react-router-dom";
+import BuisnessPage from "../Pages/BuisnessPage";
 import CityPage from "../Pages/CityPage";
 import CovidNewsPage from "../Pages/CovidPage";
+import EntertainPage from "../Pages/EntertainPage";
 import HomePage from "../Pages/HomePage";
 import { IndiaPages } from "../Pages/IndiaPage";
 import LatestNewsPage from "../Pages/LatestPage";
+import LivePage from "../Pages/LivePage";
+import OffbeatPage from "../Pages/OffbeatPage";
+import SciencePage from "../Pages/SciencePage";
 import SportsPage from "../Pages/SportsPage";
 import WorldNewsPage from "../Pages/WorldnewsPage";
 
@@ -20,8 +25,11 @@ function AllRoutes(){
                 <Route path="/worldnews" element={<WorldNewsPage/> } />
                 <Route path="/sportsnews" element={<SportsPage/> } />
                 <Route path="/covidnews" element={<CovidNewsPage/> }/>
-                <Route/>
-
+                <Route path="/offbeatnews" element={<OffbeatPage/> } />
+                <Route path="/entertainnews" element={<EntertainPage/>} />
+                <Route path="/sciencenews" element={<SciencePage/>} />
+                <Route path="/buisnessnews" element={<BuisnessPage/>} />
+                <Route path="/livenews" element={ <LivePage/>}/>
             </Routes>
         </div>
     )

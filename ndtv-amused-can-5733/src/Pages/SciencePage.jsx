@@ -1,32 +1,30 @@
-import { useEffect, useState } from "react";
-import { getLatestNews } from "../Components/api";
-import FooterPage from "../Components/FooterComponents/Footer";
-import styles from "../Components/PagesStyles/latestnews.module.css"
-import NavbarPage from "../Components/NavbarComponents/Navbar";
-import Loading from "../Components/Loading/Loading";
+import React, { useEffect, useState } from 'react';
+import { getScienceNews } from '../Components/api';
+import FooterPage from '../Components/FooterComponents/Footer';
+import Loading from '../Components/Loading/Loading';
+import NavbarPage from '../Components/NavbarComponents/Navbar';
+import styles from "../Components/PagesStyles/science.module.css"
 import uuid from 'react-uuid';
 
-function LatestNewsPage(){
-    const [data,setData] = useState()
+function SciencePage() {
+    const [data,setData] = useState();
     const [loading, setLoading] = useState(false)
 
     useEffect(()=>{
         setLoading(true)
-        getLatestNews()
+        getScienceNews()
         .then((res)=>{
-            // console.log(res.data.news[0].articles)
+            // console.log(res.data.articles)
             setData(res.data.news[0].articles)
-        setLoading(false)
-
+            setLoading(false)
+           
         })
         .catch((err)=>{
             console.log(err)
-        setLoading(false)
-
+            setLoading(false)
         })
     },[])
-
-    return(
+    return (
         <div style={{backgroundColor:"#eaeaea"}}>
         <div>
             <NavbarPage/>
@@ -49,6 +47,7 @@ function LatestNewsPage(){
       
     </div>
 )
+    
 }
 
-export default LatestNewsPage;
+export default SciencePage;

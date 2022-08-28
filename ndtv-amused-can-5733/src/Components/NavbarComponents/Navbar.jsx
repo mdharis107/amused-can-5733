@@ -67,7 +67,10 @@ export default function NavbarPage(){
                     </Link>
                 </div>
                 <div>
+                <Link className={styles.Link} to="/livenews" >
                     LIVE TV
+                </Link>
+                    
                 </div>
                 <div>
                     <Link className={styles.Link} to="/indianews" >
@@ -84,7 +87,10 @@ export default function NavbarPage(){
                     OPINION
                 </div>
                 <div>
-                    VIDEO
+                <Link className={styles.Link} to="/buisnessnews">
+                BUISNESS
+                    </Link>
+                    
                 </div>
                 <div>
                     <Link className={styles.Link} to="/citynews">
@@ -97,7 +103,10 @@ export default function NavbarPage(){
                     </Link>
                 </div>
                 <div>
-                    OFFBEAT
+                    <Link className={styles.Link} to="/offbeatnews">
+                        OFFBEAT
+                    </Link>
+                    
                 </div>
                 <div>
                     TRENDS
@@ -112,7 +121,6 @@ export default function NavbarPage(){
                     <div className={styles.nxticons}>
                         <BsTwitter />
                         <span></span>
-
                     </div>
                     <div className={styles.nxticons}>
                         <FaFacebookSquare />
@@ -159,12 +167,20 @@ export default function NavbarPage(){
                 <div>SOUTH</div>
                 <div>
                     <Link className={styles.Link} to="/sportsnews">
-                    SPORTS
+                        SPORTS
                     </Link>
                 </div>
-                <div>SCIENCE</div>
+                <div>
+                    <Link to="/sciencenews" className={styles.Link}>
+                        SCIENCE
+                    </Link>
+                </div>
                 <div>WEATHER</div>
-                <div>TRAINS</div>
+                <div>
+                    <Link to="/entertainnews" className={styles.Link}>
+                        ENTERTAINMENT
+                    </Link>
+                </div>
                 <div>TV SCHEDUE</div>
             </div>
             }

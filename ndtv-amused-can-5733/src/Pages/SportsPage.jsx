@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import uuid from "react-uuid";
 import { getSportsNews } from "../Components/api";
 import FooterPage from "../Components/FooterComponents/Footer";
 import Loading from "../Components/Loading/Loading";
@@ -13,7 +14,7 @@ function SportsPage(){
         setLoading(true)
         getSportsNews()
         .then((res)=>{
-            console.log(res.data.articles)
+            // console.log(res.data.articles)
             setData(res.data.articles)
             setLoading(false)
         })
@@ -31,7 +32,7 @@ function SportsPage(){
             { loading? (<Loading/>): (<div className={styles.container} >
                 {
                     data?.map((ele)=>(
-                        <div key={ele.title + Date.now()} >
+                        <div key={uuid()} >
                             <img src={ele.urlToImage} className={styles.img} alt="" />
                             <h2><span className={styles.span}>TITLE: </span>{ele.title}</h2>
                             <p><span className={styles.span} >DESCRIPTION: </span>{ele.description}</p>
