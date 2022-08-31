@@ -61,14 +61,15 @@ export function getBuisnessNews(){
     
 }
 
-// export function getSearchNews(search){
-//     return axios.get (`https://newsapi.org/v2/top-headlines?q=${search}&apiKey=d5c75a6144e440f8a5165703eeb4a845`)
-// }
+export function getSearchNews(search){
+    return fetch(`https://newsapi.org/v2/top-headlines?q=${search}&apiKey=d5c75a6144e440f8a5165703eeb4a845`)
+    .then((res)=>res.json())
+}
 
 
 
 export function getHomePage(){
-    return axios.get(`https://newsapi.org/v2/everything?q=tesla&from=2022-07-28&sortBy=publishedAt&apiKey=d5c75a6144e440f8a5165703eeb4a845`)
+    return axios.get(`https://newsapi.org/v2/everything?q=tesla&apiKey=d5c75a6144e440f8a5165703eeb4a845`)
     
 }
 

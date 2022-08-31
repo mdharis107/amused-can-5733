@@ -1,4 +1,40 @@
+.navbar{
+    background: #3e3e3e;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    /* position: fixed; */
+    width: 100%;
+    top: 10;  
+}
 
+#navbar_fixed{
+    top: 0px;
+    left: 0px;
+    /* z-index: 10000; */
+    padding-top: 20px;
+    position: fixed;
+    /* margin-bottom: 100px; */
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
+   
+}
+
+#navbar_last_fixed{
+    padding-top: 20px;
+    position: fixed;
+    padding-left: 170px;
+    background: #3e3e3e;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#navbar_static{
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+    padding-top: 0px;
+    position: static;
+}
 
 .navbar_first_box{
     display: flex;
@@ -23,19 +59,10 @@
 /* .navbar_first_link{
     color: #c6c6c6
 } */
-.navbar{
-    background: #3e3e3e;
-    text-align: center;
-    font-family: Roboto,sans-serif;
-    position: fixed;
-    width: 100%;
-    /* position: sticky; */
-    top: 10;
-    
-}
+
 .second_box{
     padding: 8px 0px;
-    width: 85%;
+    width: 100%;
     margin: auto;
     background-color: #3e3e3e;
     color: #fff;
@@ -45,15 +72,10 @@
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    margin-right: 170px;
     font-weight: bold;
     letter-spacing: .39px;
-    margin-left: 100px;
     transition: all .3s ease-in;
-    position: relative;
-    /* width: 100%; */
     top: 1;
-    
 }
 .second_box>div{
     cursor: pointer;
@@ -98,6 +120,7 @@
     letter-spacing: .39px;
     gap: 35px;
     padding-left: 80px;
+    
 }
 .showmore>div{
     cursor: pointer;

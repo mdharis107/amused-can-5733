@@ -102,8 +102,9 @@ export default function HomePage(){
                     </div>
 
                     </div>
-
+                   
                 <div className={styles.container} >
+                <span><h1 className={styles.heading} >TRENDING</h1></span>
                 {
                     data?.map((ele)=>(
                         <div key={uuid()} >

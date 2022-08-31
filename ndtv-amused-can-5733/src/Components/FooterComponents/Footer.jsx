@@ -6,6 +6,7 @@ import { TiSocialInstagram } from "react-icons/ti"
 import { AiFillLinkedin } from "react-icons/ai"
 import { FiSearch } from "react-icons/fi"
 import { AiOutlineCopyrightCircle} from "react-icons/ai"
+import { useState } from "react"
 // import { List, UnorderedList } from "@chakra-ui/react"
 
 // AiFillFacebook
@@ -14,9 +15,21 @@ import { AiOutlineCopyrightCircle} from "react-icons/ai"
 // AiFillLinkedin
 
 function FooterPage(){
+    const [fix,setFix] = useState(false)
+    
+    function setFixed(){
+        if(window.scrollY >=4000 ){
+            setFix(true)
+        }
+        else{
+            setFix(false)
+        }
+    }
+
+    window.addEventListener("scroll",setFixed)
    
     return(
-        <div className={styles.footer}>
+        <div className={styles.footer} id={ fix ? styles.open_foot : styles.close_foot }>
             <div className={styles.first_box} style={{borderRight:"1px solid #d2d2d2",padding:"15px 20px"}}>
                 <div>
                     <Link to="/">

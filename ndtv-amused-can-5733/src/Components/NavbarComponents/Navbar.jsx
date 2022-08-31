@@ -15,51 +15,36 @@ import {
     Button,
     Portal,
     Input,
-    // Tooltip,
   } from '@chakra-ui/react'
-// import { AppContext } from "../../Context/AppContext"
-// import { getSearchNews } from "../api"
-// import SearchPage from "../../Pages/SearchPage"
+import SearchPage from "../../Pages/SearchPage"
+import { getSearchNews } from "../api"
 
-// import'https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap'
-
-
-// // GoKebabHorizontal
-// BsTwitter
-// FaFacebookSquare
-// BsSmartwatch
-// ImSearch
-// IoNotificationsSharp
 
 export default function NavbarPage(){
     const [show,setShow] = useState(false)
     const [search,setSearch] = useState("")
-    // const [data, setData] = useState()
-    // const navigate = useNavigate()
-    
+    const [fix,setFix] = useState(false)
+    function setFixed(){
+        if(window.scrollY >= 392 ){
+            setFix(true)
+        }
+        else{
+            setFix(false)
+        }
+    }
+    window.addEventListener("scroll",setFixed)
    
-// const {query,fetching} =useContext(AppContext);
 
     const handleClick=()=>{
-     
-    //     // SearchPage(search)
-       
-    
-    //  fetch(`https://newsapi.org/v2/top-headlines?q=${search}&pageSize=40&apiKey=d5c75a6144e440f8a5165703eeb4a845`).
-    //  then((res)=>res.json())
-    //  .then(res=>{
-    //     // console.log(res.articles)
-    //     // SearchPage(res.articles)
-    //     fetching(search)
-    //     // setData(res.articles)
-    //  }).catch(err=>{
-    //     console.log(err)
-    //  })
-    //   navigate("/searchpage")
+        // SearchPage(search)
+        getSearchNews({search})
+        .then((res)=>{
+            console.log(res)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
     }
-    
-    // console.log(data)
-   
     
     return(
         <div className={styles.navbar}>
@@ -85,20 +70,20 @@ export default function NavbarPage(){
                 <div>SHOPPING</div>
                 <div>ART</div>
             </div>
-            <div className={styles.second_box}>
+            <div className={styles.second_box} id={ fix ? styles.navbar_fixed : styles.navbar_static } >
                 <div id={styles.home_logo}>
                     <Link to="/">
                         <img src="https://drop.ndtv.com/homepage/images/ndtvlogo22.svg" alt="" />
                     </Link>
                 </div>
-                {/* <Tooltip hasArrow label='Latest' bg='RGBA(255, 255, 255, 0.92)' color='#F7FAFC'> */}
+                
                 
                 <div >
                     <Link className={styles.Link} to="/latest">
                         LATEST                        
                     </Link>
                 </div>
-                {/* </Tooltip> */}
+                
 
                 <div>
                 <Link className={styles.Link} to="/livenews" >
@@ -118,7 +103,9 @@ export default function NavbarPage(){
                     
                 </div>
                 <div>
+                    <Link className={styles.Link} to="/searchpage">
                     OPINION
+                    </Link>
                 </div>
                 <div>
                 <Link className={styles.Link} to="/buisnessnews">
@@ -208,7 +195,7 @@ export default function NavbarPage(){
                 
             </div>
             {
-                show && <div className={styles.showmore}>
+                show && <div className={styles.showmore} id={ fix ? styles.navbar_last_fixed: styles.navbar_static }>
                 <div>SOUTH</div>
                 <div>
                     <Link className={styles.Link} to="/sportsnews">
